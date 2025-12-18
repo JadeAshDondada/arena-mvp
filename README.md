@@ -15,7 +15,7 @@ battle_id:
 
 
 ## 🗺️ Roadmap
-![Roadmap](docs/roadmap.jpg)
+![Roadmap](docs/roadmap.JPG)
 
 ## 📋 Документация
 | 🧪 Тест-кейсы | [Google Docs](https://docs.google.com/spreadsheets/d/1SIwXQGknVGuJYWCku9tJe4EnazXV64RHh4u2iRi-Q3M/edit?usp=sharing) |
