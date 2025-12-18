@@ -1,0 +1,1926 @@
+{
+	"info": {
+		"_postman_id": "a4211a2f-1914-4252-9ce6-7883f523b121",
+		"name": "Arena",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36190987"
+	},
+	"item": [
+		{
+			"name": "Characters",
+			"item": [
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "fighter",
+							"item": [
+								{
+									"name": "TEST | Создание бойца",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=fwtr&hp=100&attack=-1",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "fwtr"
+												},
+												{
+													"key": "hp",
+													"value": "100"
+												},
+												{
+													"key": "attack",
+													"value": "-1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Создание бойца",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Rqw&hp=578&attack=24",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Rqw"
+												},
+												{
+													"key": "hp",
+													"value": "578"
+												},
+												{
+													"key": "attack",
+													"value": "24"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С пустым именем",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=&hp=41&attack=221",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": ""
+												},
+												{
+													"key": "hp",
+													"value": "41"
+												},
+												{
+													"key": "attack",
+													"value": "221"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С именем из 1-го символа",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=t&hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "t"
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С именем из 2-х символов",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=ам&hp=875&attack=999",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "ам"
+												},
+												{
+													"key": "hp",
+													"value": "875"
+												},
+												{
+													"key": "attack",
+													"value": "999"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С именем из 40-ка символов",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=леушилеушилеушилеушилеушилеушилеушилеуши&hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "леушилеушилеушилеушилеушилеушилеушилеуши"
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С именем из 41-го символа",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=kalrnадиакkalrnадиакkalrnадиакkalrnадиакQ&hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "kalrnадиакkalrnадиакkalrnадиакkalrnадиакQ"
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С именем в начале которого есть пробел",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name= tefew&hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": " tefew"
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С именем в конце которого есть пробел",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=gr &hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "gr "
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "В имени которого есть два пробела подряд",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=ktlwt  1&hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "ktlwt  1"
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "В имени которого есть спецсимвол",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Макси%&hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Макси%"
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "В имени которого есть символ не кириллицы/латиницы",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Ölaf&hp=777&attack=54",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Ölaf"
+												},
+												{
+													"key": "hp",
+													"value": "777"
+												},
+												{
+													"key": "attack",
+													"value": "54"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С пустым значением здоровья",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": ""
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С здоровьем равным нулю",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=0&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "0"
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С здоровьем равным 1",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=1&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "1"
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С здоровьем равным 1000",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=1000&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "1000"
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С здоровьем равным 1001",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=1001&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "1001"
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С здоровьем равным -1",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=-1&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "-1"
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "С здоровьем с нечисловыми данными",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=%№&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "%№"
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C здоровьем, содержащим дробное число",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25.6&attack=511",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25.6"
+												},
+												{
+													"key": "attack",
+													"value": "511"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C пустым значением атаки",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C атакой равной нулю",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=0",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C атакой равной 1",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=1",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C атакой равной 1000",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=1000",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "1000"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C атакой равной 1001",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=1001",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "1001"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C атакой с нечисловыми данными",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=null",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "null"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "C атакой, содержащей дробное число",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=35.86",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "35.86"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Отправка запроса без квери",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Отправка PUT запроса",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=886",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "886"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Отправка PATCH запроса",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=886",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "886"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Отправка GET запроса",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}/characters/create/fighter?name=Громовержец&hp=25&attack=886",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"characters",
+												"create",
+												"fighter"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Громовержец"
+												},
+												{
+													"key": "hp",
+													"value": "25"
+												},
+												{
+													"key": "attack",
+													"value": "886"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Battle",
+			"item": [
+				{
+					"name": "start",
+					"item": [
+						{
+							"name": "TEST | Создание битвы",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=5&fighter2_id=21",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "5"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "21"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Создание битвы",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=25&fighter2_id=4",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "25"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "C бойцом с максимальным существующим id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=25&fighter2_id=31",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "25"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "31"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С бойцами с одним id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=14&fighter2_id=14",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "14"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С пустым id у бойца",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=&fighter2_id=14",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": ""
+										},
+										{
+											"key": "fighter2_id",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С пустым id обоих бойцов",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=&fighter2_id=",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": ""
+										},
+										{
+											"key": "fighter2_id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С id=0 у бойца",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=0&fighter2_id=4",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "0"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С id=0 у обоих бойцовRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=0&fighter2_id=0",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "0"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С отрицательным id бойца",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=-1&fighter2_id=14",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "-1"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Создание битвы с отрицательным id у обоих бойцов",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=-1&fighter2_id=-869",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "-1"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "-869"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С id бойца, которого не существует",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=575&fighter2_id=2",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "575"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С бойцами с несуществующими id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=3456&fighter2_id=1250",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "3456"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "1250"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С id бойца, в котором есть буквы",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=13&fighter2_id=первый",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "13"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "первый"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "С id бойцов, в обоих из которых есть буквы",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=6seven&fighter2_id=первый",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "6seven"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "первый"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Создание битвы с id бойца, в котором есть спецсимволы",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=7&fighter2_id=5%1",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "7"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "5%1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "C id бойцов, в обоих из которых есть спецсимволы",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start?fighter1_id=*%26&fighter2_id=5%1",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									],
+									"query": [
+										{
+											"key": "fighter1_id",
+											"value": "*&"
+										},
+										{
+											"key": "fighter2_id",
+											"value": "5%1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Отправка запроса без квери",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/start",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"start"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "turn",
+					"item": [
+						{
+							"name": "TEST | Сделать ход",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/battle/turn?battle_id=5",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"turn"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Совершение хода",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/turn?battle_id=7",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"turn"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "У несуществующей битвы",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/turn?battle_id=5102",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"turn"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "5102"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с пустым id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/turn?battle_id=",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"turn"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с id=0",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/turn?battle_id=0",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"turn"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с отрицательным id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/turn?battle_id=-512",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"turn"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "-512"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с id, содержащим спецсимволы",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/turn?battle_id=5;\"",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"turn"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "5;\""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "state",
+					"item": [
+						{
+							"name": "TEST | Узнать статус битвы",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получение статуса новой битвы",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state?battle_id=14",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Незавершенной битвы",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state?battle_id=7",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Завершенной битвы",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state?battle_id=8",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с пустым id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state?battle_id=",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с id = 0",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state?battle_id=0",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с отрицательным id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state?battle_id=-3",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "-3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Битвы с id, содержащим спецсимволы",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state?battle_id=%!\"",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									],
+									"query": [
+										{
+											"key": "battle_id",
+											"value": "%!\""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Отправка запроса без квери",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/battle/state",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"battle",
+										"state"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
